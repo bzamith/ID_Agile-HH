@@ -11,69 +11,66 @@ from sklearn.ensemble import RandomForestClassifier #rforest
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.cluster import KMeans
+
+def pln(data):
+	count_vect = CountVectorizer()
+	tf_transformer = TfidfTransformer()
+
+	data_vect = count_vect.fit_transform(data["phrase"].values)
+	data_vect = tf_transformer.fit_transform(data_vect)
+
+	attr_train, attr_test = train_test_split(data_vect,test_size=0.5,shuffle=False)
+	target_train, target_test = train_test_split(data["prompt"],test_size=0.5,shuffle=False)
+	target_test = target_test.values
+
+	r_forest(attr_train,attr_test,target_train,target_test)
+
+#nltk stop words
 
 #Read data and split into train and test pandas dataframe
 def read_dataset(file_name):
 	data = pd.read_csv(file_name)
-	print(data)
-	for i in range(0,len(data.columns)):
-		data.iloc[i].replace('No','False')
-	training_data, test_data = train_test_split(data, train_size=0.85, shuffle=True)
-	return training_data,test_data
+	data = data[['phrase','prompt']]
+	return data
 
-def ml_inputs(training_data,test_data):
-	attr=training_data.copy()
-	target=training_data.copy()
-	del attr['readmitted']
-	target=target['readmitted'] 
-	real = test_data.copy()
-	predicted = test_data.copy()
-	del test_data['readmitted']
-	real = real['readmitted']
-	return attr,target,real
-
-def d_tree(attr, target, real, test_data):
+def d_tree(attr_train, attr_test, target_train, target_test):
 	clf = tree.DecisionTreeClassifier()
-	clf.fit(attr,target)	
-	#predicted = pd.DataFrame(clf.predict_proba(test_data))
-	predicted = pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))	
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 
-def r_forest(attr,target,real, test_data):
+def r_forest(attr_train, attr_test, target_train, target_test):
 	clf = RandomForestClassifier()
-	clf.fit(attr,target)
-	predicted=pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))	
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 
-def mlp(attr,target,real, test_data):
+def mlp(attr_train, attr_test, target_train, target_test):
 	clf=MLPClassifier()
-	clf.fit(attr,target)
-	predicted=pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 
-def svm(attr,target,real, test_data):
+def svm(attr_train, attr_test, target_train, target_test):
 	clf=svm.SVC(probability=True)
-	clf.fit(attr,target)
-	predicted=pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 
-def knn(attr,target,real, test_data):
+def knn(attr_train, attr_test, target_train, target_test):
 	clf=KNeighborsClassifier(n_neighbors=5)
-	clf.fit(attr,target)
-	predicted=pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 	
-def nb(attr,target,real, test_data):
+def nb(attr_train, attr_test, target_train, target_test):
 	clf=GaussianNB()
-	clf.fit(attr,target)
-	predicted=pd.DataFrame(clf.predict(test_data))
-	#print(accuracy_score(real, predicted))
-	print(f1_score(real, predicted))
+	clf.fit(attr_train,target_train)	
+	predicted = pd.DataFrame(clf.predict(attr_test))
+	print(f1_score(target_test, predicted,average='micro'))	
 
 #Main Function
 if __name__ == '__main__':
@@ -84,18 +81,5 @@ if __name__ == '__main__':
 	file_name = args.inputFile
 
 	#Execution
-	training_data,test_data = read_dataset(file_name)
-	attr, target, real = ml_inputs(training_data,test_data)
-
-
-
-	print("**DTREE")
-	d_tree(attr,target,real,test_data)
-	print("**RFOREST")
-	r_forest(attr,target,real,test_data)
-	print("**MLP")
-	mlp(attr,target,real,test_data)
-	print("**KNN")
-	knn(attr,target,real,test_data)
-	print("**NB")
-	nb(attr,target,real,test_data)
+	data = read_dataset(file_name)
+	pln(data)
