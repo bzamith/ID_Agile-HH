@@ -2,7 +2,7 @@
 
 ID Agile is a healthcare solution which seeks to reduce patients waiting time (at hospitals queue). Our clients are the health insurance companies and the users are the patients. 
 
-The patient types what he is feeling on our app (e.g. "My chests hurts" or "I have a knee pain when i walk a lot") and then via Natural Language Processing the syntoms are classified into a medical specialty (e.g. "Orthopedist" or "Gastroenterologist"). The app also gathers information such as patients location. The classification will be compared to a database of hospitals and the closest one that has physicians from that specialty will be indicated. 
+The patient types what he is feeling on our app (e.g. "My chests hurts" or "I have a knee pain when i walk a lot") and then via Natural Language Processing the symptoms are classified into a medical specialty (e.g. "Orthopedist" or "Gastroenterologist"). The app also gathers information such as patients location. The classification will be compared to a database of hospitals and the closest one that has physicians from that specialty will be indicated. 
 
 If the patient decides to go to that hospital, a QR code is generated. The hospital receives an alert on its integrated system and when the patient arrives it simply scans the QR code and he/she will be directed to the correct hospitals wing.
 
