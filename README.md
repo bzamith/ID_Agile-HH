@@ -10,7 +10,7 @@ If the patient decides to go to that hospital, a QR code is generated. The hospi
 - [Fabiana Paes](https://www.linkedin.com/in/fabianapaes/): Healthcare
 - [Jessica Marques](https://www.linkedin.com/in/j%C3%A9ssica-marques-88b33b69/): Bussiness
 - [Leonardo Antunes](https://www.linkedin.com/in/antunesleonardo/): Design
-- [Luciana Rodrigues](https://www.linkedin.com/in/luciana-rodrigues-a8451aa3/): Bussiness Intelligence
+- [Luciana Rodrigues](https://www.linkedin.com/in/luciana-rodrigues-a8451aa3/): BI
 
 ## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
