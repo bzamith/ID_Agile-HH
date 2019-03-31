@@ -1,6 +1,5 @@
 import argparse #Import Argsparse
 import pandas as pd #For datasets
-import statistics #For mean and standard deviation
 import os #Create dir
 from sklearn.neighbors import KNeighborsClassifier #knn
 from sklearn import svm #svm
@@ -22,8 +21,8 @@ def pln(data):
 	data_vect = count_vect.fit_transform(data["phrase"].values)
 	data_vect = tf_transformer.fit_transform(data_vect)
 
-	attr_train, attr_test = train_test_split(data_vect,test_size=0.5,shuffle=False)
-	target_train, target_test = train_test_split(data["prompt"],test_size=0.5,shuffle=False)
+	attr_train, attr_test = train_test_split(data_vect,test_size=0.2,shuffle=False)
+	target_train, target_test = train_test_split(data["especialist"],test_size=0.2,shuffle=False)
 	target_test = target_test.values
 
 	r_forest(attr_train,attr_test,target_train,target_test)
@@ -33,7 +32,7 @@ def pln(data):
 #Read data and split into train and test pandas dataframe
 def read_dataset(file_name):
 	data = pd.read_csv(file_name)
-	data = data[['phrase','prompt']]
+	data = data[['phrase','especialist']]
 	return data
 
 def d_tree(attr_train, attr_test, target_train, target_test):
