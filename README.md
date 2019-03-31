@@ -47,8 +47,8 @@ The screens below are prototypes of our solution:
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
 
 ### Authors
-Bruna Zamith Santos
-Fabiana Paes
-Jessica Marques
-Leonardo Antunes
-Luciana Rodrigues
+[Bruna Zamith Santos](https://www.linkedin.com/in/bruna-zamith/): IA and Developer
+[Fabiana Paes](https://www.linkedin.com/in/fabianapaes/): Healthcare
+[Jessica Marques](https://www.linkedin.com/in/j%C3%A9ssica-marques-88b33b69/): Bussiness
+[Leonardo Antunes](): Design
+[Luciana Rodrigues](https://www.linkedin.com/in/luciana-rodrigues-a8451aa3/): Bussiness Intelligence
