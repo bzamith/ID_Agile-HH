@@ -7,7 +7,11 @@ The patient types what he is feeling on our app (e.g. "My chests hurts" or "I ha
 If the patient decides to go to that hospital, a QR code is generated. The hospital receives an alert on its integrated system and when the patient arrives it simply scans the QR code and he/she will be directed to the correct hospitals wing.
 
 ## Prototype
-The screens below are prototypes of our solution
+The screens below are prototypes of our solution:
+
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot1.png)
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot2.png)
+
 
 ## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
