@@ -18,6 +18,13 @@ Each of them is trained with 60% of the original dataset and tested with the oth
 
 The dataset used is an adaption from [Medical Speech Transcription and Intent Data](https://www.kaggle.com/paultimothymooney/medical-speech-transcription-and-intent/kernels).
 
+In summary, we applied:
+
+- [x] NLP = Removal of stop words, count vectorizer and tdidf.
+- [x] ML = Decision Tree, Random Forest, Multi-Layer Perceptron and K-Nearest Neighbours
+- [x] Simplified interface
+- [x] Simplified database
+
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/exampleExecution.png)
 
 ## Execution
