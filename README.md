@@ -2,7 +2,6 @@
 
 
 ## Execution
-At this same dir:
 ```bash
 > pip3 install -r requirements.txt
 > python3 interface.py -i overview-of-recordings-especialists.csv 
@@ -20,7 +19,7 @@ At this same dir:
 - overview-of-recordings.csv = Original dataset ([source](https://www.kaggle.com/paultimothymooney/medical-speech-transcription-and-intent/kernels))
 - bd.sql = A prototype of a database for our api
 
-### Main implementations
+## Main implementations
 - [x] NLP 
 - [x] Decision Tree, Random Forest, MLP and KNN
 - [x] Simple interface
