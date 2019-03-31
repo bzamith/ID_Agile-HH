@@ -4,6 +4,8 @@ import ai
 
 class Interface:
 	def __init__(self, master=None):
+		self.data = ai.read_dataset(file_name)
+		self.count_vect, self.tf_transformer, self.clf = ai.nlp(self.data)
 		self.saved_phrase = "."
 		
 		self.fontePadrao = ("Arial", "10")
@@ -45,9 +47,7 @@ class Interface:
 	#Método verificar senha
 	def send_phrase(self):
 		self.saved_phrase = self.phrase.get()
-		data = ai.read_dataset(file_name)
-		count_vect, tf_transformer, clf = ai.nlp(data)
-		especialist = ai.calculate_instance(self.saved_phrase,count_vect,tf_transformer,clf)
+		especialist = ai.predict_instance(self.saved_phrase,self.count_vect,self.tf_transformer,self.clf)
 		self.message["text"] = especialist[0]
 
 #Main Function
