@@ -35,7 +35,7 @@ In summary, we applied:
 
 ## Files
 - ai.py = The artificial intelligence core
-- interface.py = Run the interface and call ai 
+- interface.py = Run the interface and calls ai.py
 - overview-of-recordings-especialists.csv = Our adapted dataset
 - bd.sql = A prototype of a database for our api
 - dashboard 
