@@ -17,7 +17,7 @@ from sklearn.cluster import KMeans
 def initialize(data):
 	count_vect = CountVectorizer(stop_words='english')
 	tf_transformer = TfidfTransformer()
-	data_train, data_test = train_test_split(data,test_size=0.2,stratify=data["especialist"])
+	data_train, data_test = train_test_split(data,test_size=0.4,stratify=data["especialist"])
 	return count_vect,tf_transformer,data_train,data_test
 
 #train and test (fit and transform)
@@ -37,7 +37,6 @@ def nlp(data):
 	attr_test = tfidf(data_test, count_vect, tf_transformer, 'test')
 	target_train = data_train['especialist'].values
 	target_test = data_test['especialist'].values
-
 	clf, alg = picks_ml_alg(attr_train,attr_test,target_train,target_test)
 	print("Trained with "+alg)
 	return count_vect, tf_transformer, clf
@@ -57,22 +56,27 @@ def read_dataset(file_name):
 #run each algorithm and picks the best
 def picks_ml_alg(attr_train, attr_test, target_train, target_test):
 	max_clf , max_ac = d_tree(attr_train, attr_test, target_train, target_test)
-	alg = "D_Tree"
+	alg = "Decision Tree"
+	print("***Accuracy Values***")
+	print(alg+"..."+str(max_ac))
 	curr_clf, curr_ac = r_forest(attr_train, attr_test, target_train, target_test)
 	if curr_ac > max_ac:
 		max_ac = curr_ac
 		max_clf = curr_clf
-		alg = "R_Forest"
+		alg = "Random Forest"
+	print("Random Forest..."+str(curr_ac))
 	curr_clf, curr_ac = mlp(attr_train, attr_test, target_train, target_test)
 	if curr_ac > max_ac:
 		max_ac = curr_ac
 		max_clf = curr_clf
 		alg = "MLP"
+	print("MLP..."+str(curr_ac))
 	curr_clf, curr_ac = knn(attr_train, attr_test, target_train, target_test)
 	if curr_ac > max_ac:
 		max_ac = curr_ac
 		max_clf = curr_clf
 		alg = "KNN"
+	print("KNN..."+str(curr_ac))
 	return max_clf, alg
 
 #ml algorithms below

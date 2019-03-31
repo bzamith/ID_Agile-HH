@@ -42,6 +42,7 @@ class Interface:
 		self.send.pack()
   
 		self.message = Label(self.fourth_container, text="", font=self.fontePadrao)
+		self.message["font"] = ("Arial", "20", "bold")
 		self.message.pack()
   
 	#Método verificar senha
@@ -61,6 +62,7 @@ if __name__ == '__main__':
 	#Execution
 	print()
 	root = Tk()
+	root.title("ID Agile")
 	Interface(root)
 	root.mainloop()
   
