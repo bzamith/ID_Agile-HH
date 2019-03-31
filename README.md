@@ -45,3 +45,10 @@ The screens below are prototypes of our solution:
 
 ## Simulated Dashboard
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
+
+### Authors
+Bruna Zamith Santos
+Fabiana Paes
+Jessica Marques
+Leonardo Antunes
+Luciana Rodrigues
