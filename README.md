@@ -6,6 +6,12 @@ The patient types what he is feeling on our app (e.g. "My chests hurts" or "I ha
 
 If the patient decides to go to that hospital, a QR code is generated. The hospital receives an alert on its integrated system and when the patient arrives it simply scans the QR code and he/she will be directed to the correct hospitals wing.
 
+- [Bruna Zamith Santos](https://www.linkedin.com/in/bruna-zamith/): IA and Developer
+- [Fabiana Paes](https://www.linkedin.com/in/fabianapaes/): Healthcare
+- [Jessica Marques](https://www.linkedin.com/in/j%C3%A9ssica-marques-88b33b69/): Bussiness
+- [Leonardo Antunes](https://www.linkedin.com/in/antunesleonardo/): Design
+- [Luciana Rodrigues](https://www.linkedin.com/in/luciana-rodrigues-a8451aa3/): Bussiness Intelligence
+
 ## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
 
@@ -45,10 +51,3 @@ The screens below are prototypes of our solution:
 
 ## Simulated Dashboard
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
-
-### Authors
-- [Bruna Zamith Santos](https://www.linkedin.com/in/bruna-zamith/): IA and Developer
-- [Fabiana Paes](https://www.linkedin.com/in/fabianapaes/): Healthcare
-- [Jessica Marques](https://www.linkedin.com/in/j%C3%A9ssica-marques-88b33b69/): Bussiness
-- [Leonardo Antunes](https://www.linkedin.com/in/antunesleonardo/): Design
-- [Luciana Rodrigues](https://www.linkedin.com/in/luciana-rodrigues-a8451aa3/): Bussiness Intelligence
