@@ -6,15 +6,6 @@ The patient types what he is feeling on our app (e.g. "My chests hurts" or "I ha
 
 If the patient decides to go to that hospital, a QR code is generated. The hospital receives an alert on its integrated system and when the patient arrives it simply scans the QR code and he/she will be directed to the correct hospitals wing.
 
-## Prototype
-The screens below are prototypes of our solution:
-
-![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot1.png)
-![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot2.png)
-
-## Simulated Dashboard
-![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
-
 ## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
 
@@ -45,3 +36,12 @@ In summary, we applied:
 - overview-of-recordings-especialists.csv = Our adapted dataset
 - bd.sql = A prototype of a database for our api
 - [dashboard.html](https://app.powerbi.com/view?r=eyJrIjoiYTk3MTdiMWMtZjExMS00YjQ5LTgxOWMtYjdmNjM3NzYzNzhkIiwidCI6IjA4MTQ3M2M2LTUwNGEtNDM3Zi04MzhjLWFiOWE2ZjY3MWVmYyIsImMiOjR9)
+
+## Prototype
+The screens below are prototypes of our solution:
+
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot1.png)
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot2.png)
+
+## Simulated Dashboard
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
