@@ -38,4 +38,4 @@ In summary, we applied:
 - interface.py = Run the interface and calls ai.py
 - overview-of-recordings-especialists.csv = Our adapted dataset
 - bd.sql = A prototype of a database for our api
-- dashboard 
+- [dashboard.py](https://app.powerbi.com/view?r=eyJrIjoiYTk3MTdiMWMtZjExMS00YjQ5LTgxOWMtYjdmNjM3NzYzNzhkIiwidCI6IjA4MTQ3M2M2LTUwNGEtNDM3Zi04MzhjLWFiOWE2ZjY3MWVmYyIsImMiOjR9)
