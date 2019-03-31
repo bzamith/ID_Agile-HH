@@ -6,10 +6,10 @@ The patient types what he is feeling on our app (e.g. "My chests hurts" or "I ha
 
 If the patient decides to go to that hospital, a QR code is generated. The hospital receives an alert on its integrated system and when the patient arrives it can only scan the QR code and will be directed to the correct wing.
 
-### Prototype
+## Prototype
 The screens below are prototypes of our solution
 
-### Implemented
+## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
 
 4 ML algorithms were implemented: Decision Tree, Random Forest, Multi-Layer Perceptron and K-Nearest Neighbours. 
@@ -20,7 +20,7 @@ The dataset used is an adaption from [Medical Speech Transcription and Intent Da
 
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/exampleExecution.png)
 
-### Execution
+## Execution
 ```bash
 > pip3 install -r requirements.txt
 > python3 interface.py -i overview-of-recordings-especialists.csv 
