@@ -12,6 +12,8 @@ The screens below are prototypes of our solution:
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot1.png)
 ![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/prot2.png)
 
+## Simulated Dashboard
+![](https://github.com/bzamith/HealthHackathon/blob/master/Pictures/dash0.png)
 
 ## Implemented
 The NLP was implemented making use of SKLearn (Python3). A simple interface was created as well as a SQL database. 
